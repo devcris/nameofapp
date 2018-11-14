@@ -10,14 +10,16 @@ ul {
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li, a, .navnavbar-nav {
     display: inline-block;
-    color: white;
+    color: gold;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-.img { with:100%}
+
+.background {
+    background-size: cover;}

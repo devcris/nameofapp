@@ -2,9 +2,6 @@
 <html>
   <head>
     <title>Nameofapp</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
@@ -16,18 +13,32 @@
   <%= csrf_meta_tags %>
   </head>
   <body>
-  <nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Used Bikes</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a><%= link_to "Home", simple_pages_index_path %></a></li>
-      <li><a><%= link_to "About", simple_pages_about_path %></a></li>
-      <li><a><%= link_to "Contact", simple_pages_contact_path %></a></li>
-    </ul>
-  </div>
+    <div class= "background">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/simple_pages/index">Refurbished Bikes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="/simple_pages/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/simple_pages/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Products</a>
+            </li>
+          </ul>
+
+        </div>
+        <form class="search_bar" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+          <input type="submit" name="commit" value="Search" class="btn btn-submit" data-disable-with="Search">
+          <input id="q" value="" class="form-fld" type="text" name="q"></form>
 </nav>
+</div>
     <footer>
   &copy; 2018 Bike Berlin
 </footer>
