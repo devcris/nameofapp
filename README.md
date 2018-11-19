@@ -1,2 +1,6 @@
 # README
-Hello. Here the first app will be developed. Lets see what happens next.
+Dear reader
+
+this is the work in progress of an app for bikes
+
+-building of the product database MVC scaffolding
