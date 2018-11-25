@@ -1,7 +1,7 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+* { box-sizing: border-box; }
 //navbar//
 ul {
     position: fixed;
@@ -13,7 +13,6 @@ ul {
 li, a, .navnavbar-nav {
     display: inline-block;
     color: firebrick;
-    text-align: center;
     padding: 7px;
     text-decoration: none;
 }
@@ -28,5 +27,4 @@ li, a, .navnavbar-nav {
     width: 100%;
     background-color:#00000;
     color: white;
-    text-align: center;
 }
