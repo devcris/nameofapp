@@ -8,11 +8,11 @@ ul {
     top: 0;
     width: 100%;
 }
-
+ h1 { padding: 30px}
 
 li, a, .navnavbar-nav {
     display: inline-block;
-    color: firebrick;
+    color: #333333;
     padding: 7px;
     text-decoration: none;
 }
@@ -25,6 +25,6 @@ li, a, .navnavbar-nav {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:#00000;
-    color: white;
+    background-color:#333333;
+    color: #f0f0f0;
 }
