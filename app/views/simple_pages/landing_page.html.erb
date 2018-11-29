@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
-<!-- Bootstrap stylesheet-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<div class="page-wrap" id="landing_page">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -19,13 +7,12 @@
   </ol>
   <div class="carousel-inner">
   <% @products.each do |product| %>
-  <div class="carousel-item">
+  <div class="carousel-item<%= " active" if product == @products.first %>">
     <%= image_tag(product.image_url) %>
     <div class="carousel-caption d-none d-md-block">
       <%= product.name %>
     </div>
   </div>
-  <% end %>
 </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,12 +23,5 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!-- Script to Activate the Carousel -->
-    <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        });
-    </script>
-    <h2>Featured Product:</h2>
-    <%= @featured_product.name %>
-    </body>
+<% end %>
+</div>
