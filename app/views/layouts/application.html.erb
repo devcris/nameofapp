@@ -34,9 +34,15 @@
           </ul>
 
         </div>
-        <!--<form class="search_bar" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+    <!--<form class="search_bar" action="/products" accept-charset="UTF-8" method="get">
+          <input name="utf8" type="hidden" value="✓">
           <input type="submit" name="commit" value="Search" class="btn btn-submit" data-disable-with="Search">
           <input id="q" value="" class="form-fld" type="text" name="q"></form>-->
+  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+ <%= form.label :q, 'Search for:' %>
+  <%= form.text_field :q, id: 'q', value: params[:q] %>
+  <%= form.submit 'Search' %>
+<% end %>
 </nav>
 </div>
     <footer class="pagefooter">
