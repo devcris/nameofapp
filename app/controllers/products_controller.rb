@@ -51,6 +51,7 @@ class ProductsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
+      redirect_to "/simple_pages/landing_page"
     end
   end
 
