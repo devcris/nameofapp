@@ -52,11 +52,11 @@ end
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
+        redirect_to "/simple_pages/landing_page"
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
-      redirect_to "/simple_pages/landing_page"
     end
   end
 
@@ -78,6 +78,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :colour)
+      params.require(:product).permit(:name, :description, :image_url, :color)
     end
 end
