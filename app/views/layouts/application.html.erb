@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a href="/simple_pages/index">About</a>
+              <a href="/simple_pages/about">About</a>
             </li>
             <li class="nav-item">
               <a href="/simple_pages/contact">Contact</a>
@@ -39,15 +39,15 @@
           <input type="submit" name="commit" value="Search" class="btn btn-submit" data-disable-with="Search">
           <input id="q" value="" class="form-fld" type="text" name="q"></form>-->
   <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
- <%= form.label :q, 'Search for:' %>
+  <%= form.label :q, 'Search for:' %>
   <%= form.text_field :q, id: 'q', value: params[:q] %>
   <%= form.submit 'Search' %>
-<% end %>
+  <% end %>
 </nav>
 </div>
+<%= yield %>
     <footer class="pagefooter">
   &copy; 2018 Bike Berlin
 </footer>
-    <%= yield %>
   </body>
 </html>
