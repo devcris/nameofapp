@@ -2,7 +2,7 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= image_tag product.image_url, height: 120, width: 130 if product.image_url.present? %></td>
-        <td><%= product.color %></td>
+        <td><%= product.colour %></td>
         <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
