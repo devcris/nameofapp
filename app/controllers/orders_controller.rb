@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
 
+  def before_action :authenticate_user!
+    end
+    
 def index
   @orders = Order.includes(:product).all
 end
