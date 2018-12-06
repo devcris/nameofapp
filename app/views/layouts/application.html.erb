@@ -45,14 +45,26 @@
         </div>
         <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-
+      <div class="alert alert-info" role="alert" class="close" aria-label="Close">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        <%= alert %>
+        </button>
+        This is a info alert—check it out!
+      </div>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+       <strong>Hello!</strong> You should check in on some of those fields below.
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         <%= notice %>
+       </button>
+      </div>
   <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
   <%= form.label :q, 'Search for:' %>
   <%= form.text_field :q, id: 'q', value: params[:q] %>
   <%= form.submit 'Search' %>
   <% end %>
 </nav>
-</div>
 <%= yield %>
     <footer class="pagefooter">
   &copy; 2018 Bike Berlin
