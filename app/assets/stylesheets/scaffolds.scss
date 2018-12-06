@@ -47,9 +47,13 @@ div {
 }
 
 #notice {
-  color: green;
+  color: darkgreen;
+  margin-top: 80px;
 }
-
+#alert {
+  margin-top: 100px;
+  color: firebrick;
+}
 .field_with_errors {
   padding: 2px;
   background-color: red;
