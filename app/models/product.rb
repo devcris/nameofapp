@@ -10,4 +10,5 @@ def worst_rating_comment
   comments.rating_asc.first
 end
 
+
 end
