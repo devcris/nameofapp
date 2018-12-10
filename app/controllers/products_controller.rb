@@ -27,8 +27,6 @@ end
   def edit
   end
 
-  def show
-  end
 
   # POST /products
   # POST /products.json
