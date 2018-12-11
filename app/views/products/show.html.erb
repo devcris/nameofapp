@@ -12,7 +12,7 @@
 <div>
 
 <strong>Rating:</strong>
-      <%= @product.highest_rating_comment.rating %>
+<%= @product.highest_rating_comment.rating unless @product.highest_rating_comment.nil? %>
       <i class="far fa-star"></i>
       <i class="far fa-star"></i>
       <i class="far fa-star"></i>
