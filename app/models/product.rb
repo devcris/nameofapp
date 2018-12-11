@@ -10,6 +10,4 @@ def worst_rating_comment
   comments.rating_asc.first
 end
 
-ratyrate_rateable "name", "price"
-
 end
