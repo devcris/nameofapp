@@ -5,6 +5,7 @@ class Comment < ApplicationRecord
   belongs_to :product
 scope :rating_desc, -> { order(rating: :desc) }
 scope :rating_asc, -> { order(rating: :asc) }
+validates :name, presence: true
 validates :body, presence: true
 validates :user, presence: true
 validates :product, presence: true
