@@ -2,8 +2,12 @@
     <% @comments.each do |comment| %>
         <div class="row">
             <hr>
+<<<<<<< HEAD
             <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %>
             </em></small></p>
+=======
+            <p><%= comment.user.first_name %> <small><em><%= "#{comment.time_ago_in_words} ago" %></em></small></p>
+>>>>>>> c7eb044ed2201bf094ed637be90f2edacc2a5cd6
             <p><%= "Rating: #{comment.rating}/5" %></p>
             <div class="rated" data-score="<%= comment.rating %>"></div>
             <p><%= comment.body %></p>
