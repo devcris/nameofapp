@@ -1,24 +1,42 @@
-<h1>Contact</h1>
-<p>For more information please contact us</p>
+<!-- Container (Contact Section) -->
+
+<div class="container" id="contact">
+  <h1 class="text-center">Contact</h1>
+  <p class="text-center"><strong>Please send us a message and we get back to you as soon as possible</<strong></p>
 <%= flash[:notice] %>
 
 <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group">
+<br>
+  <div class="row">
+<div class="col-md-4">
+
+  <p>Our contact details</p>
+  <p><span class="glyphicon glyphicon-map-marker"></span>Berlin, Germany</p>
+  <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 49718888823</p>
+  <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+</div>
+<div class="col-md-8">
+  <div class="row">
+    <div class="col-sm-6 form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
   </div>
-  <br>
-  <div class="form-group">
+  <div class=" col-sm-6 form-group">
     <%= form.label :email %>
     <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
   </div>
-  <br>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  <div class="col-sm-12 form-group">
+  <%= form.label :message %>
+  <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
   </div>
-  <br>
-</div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-12 form-group">
 <%= form.submit "Send", class: "form_label" %>
+</div>
+</div>
+</div>
+</div>
 <% end %>
+</div>
+</div>

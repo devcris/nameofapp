@@ -11,12 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
-
 <body>
-  <div class="background">
+<div class="container-fluid">
+  <div class="row">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/simple_pages/landing_page">Refurbished Bikes</a>
-      
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,13 +43,13 @@
             </li>
           <% end %>
         </ul>
-      </div>
+  </div>
 
       <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-        <%= form.label :q, 'Search for:' %>
         <%= form.text_field :q, id: 'q', value: params[:q] %>
         <%= form.submit 'Search' %>
       <% end %>
+      
     </nav>
 
     <% if notice %>
@@ -64,12 +64,11 @@
       </p>
     <% end %>
   </div>
-
+</div>
   <%= yield %>
-  
   <footer class="pagefooter">
     &copy; 2018 Bike Berlin
   </footer>
-</body>
 
+</body>
 </html>
