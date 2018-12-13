@@ -4,7 +4,7 @@
   <%= @product.name %>
 </div>
 <div class="product-image img-responsive">
-<%= image_tag(@product.image_url, class: "image-fluid img-thumbnail ", width: "350", data_zoom_image: @product.image_url) %>
+<%= image_tag(@product.image_url, class: "image-fluid img-thumbnail ", width: "350", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
           </div>
 <div>
   <strong>Description:</strong>
