@@ -15,7 +15,8 @@ end
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page])
+    page = params[:page] ? params[:page] : 1
+    @comments = @product.comments.order("created_at DESC").paginate(page: page)
   end
 
   # GET /products/new
@@ -49,7 +50,7 @@ end
   def update
     respond_to do |format|
       if @product.update(product_params)
-      format.html { redirect_to simple_pages_landing_page_url, notice: 'Product was successfully updated.'}
+      format.html { redirect_to @product, notice: 'Product was successfully updated.'}
        format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }

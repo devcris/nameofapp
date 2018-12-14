@@ -3,6 +3,7 @@ require 'action_view'
 class Comment < ApplicationRecord
   include ActionView::Helpers::DateHelper
 
+ self.per_page = 3
   belongs_to :user
   belongs_to :product
 
