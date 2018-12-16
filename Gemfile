@@ -59,4 +59,5 @@ gem 'devise'
 gem 'cancancan', '~> 2.0'
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.1.0'
-  gem 'rspec-rails', '~> 3.8'
+gem 'rspec-rails', '~> 3.8'
+gem 'rails-controller-testing'
