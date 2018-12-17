@@ -5,6 +5,7 @@ class SimplePagesController < ApplicationController
    def index
 end
 def thank_you
+  byebug
   @name = params[:name]
   @email = params[:email]
   @message = params[:message]
