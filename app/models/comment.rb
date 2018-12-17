@@ -1,7 +1,6 @@
 require 'action_view'
 
 class Comment < ApplicationRecord
-  include ActionView::Helpers::DateHelper
 
  self.per_page = 3
   belongs_to :user
@@ -15,9 +14,4 @@ validates :user, presence: true
 validates :product, presence: true
 validates :rating, numericality: { only_integer: true }
 
-  
-
-  def time_ago_in_words
-    distance_of_time_in_words(created_at, Time.now)
-  end
 end
