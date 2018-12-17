@@ -7,27 +7,25 @@
 <%= image_tag(@product.image_url, class: "image-fluid img-thumbnail ", width: "350", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
 
 </div>
-
-          </div>
-
 <div>
   <strong>Description:</strong>
   <%= @product.description %>
 </div>
 <div>
-
-  <strong>Rating:</strong>
+<strong>Rating:</strong>
   <%= @product.highest_rating_comment.rating unless @product.highest_rating_comment.nil? %>
   <i class="fas fa-star"></i>
   <i class="far fa-star"></i>
   <i class="far fa-star"></i>
 </div>
-</div>
 <div>
   <strong>Price:</strong>
   <%= @product.price %>
 </div>
-
+<%= form_with(url: '/payments/create') do |form| %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+  <%= hidden_field_tag(:product_id, @product.id) %>
+<% end %>
 <div>
   <strong>Colour:</strong>
   <%= @product.colour %>
