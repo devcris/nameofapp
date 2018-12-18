@@ -1,16 +1,20 @@
 
-<div>
+<div class="container">
+  <div class="row" >
+    <div class="col-sm-12 col-lg-6 productinfo-left">
   <strong>Name:</strong>
   <%= @product.name %>
-</div>
 <div class="product-image img-responsive">
-<%= image_tag(@product.image_url, class: "image-fluid img-thumbnail ", width: "350", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
-
+  <%= image_tag(@product.image_url, class: "image-fluid img-zoom ", width: "350", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 </div>
 <div>
   <strong>Description:</strong>
   <%= @product.description %>
 </div>
+</div>
+<div class="col-sm-12 col-lg-6 productinfo-right">
 <div>
 <strong>Rating:</strong>
   <%= @product.highest_rating_comment.rating unless @product.highest_rating_comment.nil? %>
@@ -33,9 +37,9 @@
 <strong>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </strong>
 <%= render 'new_comment' %>
 <%= render 'comments' %>
+</div>
 <div class="pagination">
   <center><%= will_paginate @comments %></center>
   </div>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>
+</div>
