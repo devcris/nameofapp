@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row" >
     <div class="col-sm-12 col-lg-6 productinfo-left">
+      <% cache @product do %>
   <strong>Name:</strong>
   <%= @product.name %>
 <div class="product-image img-responsive">

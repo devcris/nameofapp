@@ -1,4 +1,5 @@
     <div class="col-sm">
+      <% cache product do %>
       <h2><%= link_to product.name, product %></h2>
       <p><%= product.description %></p>
       <strong>$ <%= product.price %></strong>
