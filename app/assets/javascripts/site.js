@@ -15,9 +15,5 @@ $(document).on('turbolinks:load', function() {
       return $(this).attr('data-score');
     }
   });
-});
-
-$(document).on('turbolinks:load', function() {
-
-$('.img-zoom').elevateZoom();
+  $('.img-zoom').elevateZoom();
 });
