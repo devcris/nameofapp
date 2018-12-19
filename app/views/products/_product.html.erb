@@ -2,13 +2,13 @@
   <% cache product do %>
     <h2><%= link_to product.name, product %></h2>
     <p><%= product.description %></p>
-    <strong>$<%= product.psrice %></strong>
+    <strong>$<%= product.price %></strong>
     <p>
       <%= image_tag product.image_url, height: 180, width: 200 if product.image_url.present? %>
     </p>
     <p><%= product.colour %></p>
   <% end %>
-  
+
   <span><%= link_to 'Show', product %></span>
   <span><%= link_to 'Edit', edit_product_path(product) %></span>
   <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
