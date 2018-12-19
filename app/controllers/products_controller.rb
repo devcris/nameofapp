@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-redis.sadd("user_#{self.id}_product", user.id)
+
   # GET /products
   # GET /products.json
   def index
