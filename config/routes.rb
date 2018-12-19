@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
 
+  mount ActionCable.server => '/cable'
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: "user_registrations" }
   resources :products do
   resources :comments
@@ -16,5 +17,6 @@ end
   post 'simple_pages/thank_you'
 
 end
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
