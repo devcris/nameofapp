@@ -4,7 +4,6 @@ development:
 test:
   adapter: async
 
-
 production:
   adapter: postgresql
   url: postgres://yxdomhsatzpebc:11ca6516ad89c12ec98f6f77541ee5f67b6371bbc73ea05088fd1688d0149821@ec2-54-235-156-60.compute-1.amazonaws.com:5432/db58i62lfvb7l7
