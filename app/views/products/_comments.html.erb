@@ -2,6 +2,6 @@
 
 <div class="product-reviews">
     <% @comments.each do |comment| %>
-    <%= render 'comment' %>
+   <%= render "comment", comment: comment %>
   <% end %>
 </div>
