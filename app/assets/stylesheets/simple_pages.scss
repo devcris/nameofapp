@@ -31,8 +31,8 @@ li, a, {
 }
 .carousel-inner
  {
- width: 1200px;
- height: 600px;
+ width: 1350px;
+ height: 550px;
  margin-left: auto;
  margin-right: auto;
 
@@ -50,10 +50,10 @@ li, a, {
 
 }
 #contact {
-    /*background: image-url("contact1.jpg") fixed center;*/
+    background: image-url("contact5.jpg") fixed center ;
     background-size: cover;
-    width: 100%;
-    height: 650px;
+    width: 300%;
+    height: 850px;
     margin-top: 5%;
     min-width: 250px;
 }

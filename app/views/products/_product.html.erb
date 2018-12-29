@@ -1,13 +1,15 @@
 <div class="col-sm">
   <% cache product do %>
-    <h2><%= link_to product.name, product %></h2>
+    <h4><%= link_to product.name, product %></h4>
     <p><%= product.description %></p>
+    <div class="panel-footer">
     <strong>$<%= product.price %></strong>
     <p>
-      <%= image_tag product.image_url, height: 180, width: 200 if product.image_url.present? %>
+      <%= image_tag product.image_url, height: 200, width: 280 if product.image_url.present? %>
     </p>
     <p><%= product.colour %></p>
   <% end %>
+  </div>
 
   <span><%= link_to 'Show', product %></span>
   <span><%= link_to 'Edit', edit_product_path(product) %></span>
