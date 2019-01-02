@@ -1,6 +1,6 @@
 class SimplePagesController < ApplicationController
   def landing_page
-     @products = Product.limit(3)
+     @products = Product.order(id: :desc).limit(3)
    end
    def index
 end

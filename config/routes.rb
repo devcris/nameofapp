@@ -15,7 +15,7 @@ end
   get 'simple_pages/landing_page', to: 'simple_pages#landing_page'
   root 'simple_pages#landing_page'
   post 'simple_pages/thank_you'
-
+  post 'payments/create'
 end
 
 
